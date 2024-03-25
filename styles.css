@@ -1,0 +1,141 @@
+/* primary 40E0D0 */
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: white;
+  color: white;
+  width: 80%;
+  border-radius: 30px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5em;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+  color: rgb(3, 153, 138);
+  transition-duration: 0.5s;
+  font-size: 0.9em;
+}
+
+li a:hover {
+  color: deeppink;
+}
+
+li:first-child {
+  margin-right: auto;
+  font-weight: bold;
+}
+
+li:last-child {
+  margin-right: 20px;
+}
+
+.hero-section {
+  padding: 100px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(3, 153, 138);
+  gap: 1em;
+  background-image: url(./assets/lady\ doctor.png),
+    url(./assets/hospital\ blur\ background_magicstudio_bv2k9zabxck.png);
+  background-size: 500px, cover;
+  background-repeat: no-repeat;
+  background-position: right, center;
+}
+
+h1 > span {
+  color: deeppink;
+}
+
+.hero-text {
+  width: 50%;
+  height: auto;
+  font-size: 1.8em;
+}
+
+.hero-text h1 {
+  line-height: 60px;
+  margin-bottom: 50px;
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  color: white;
+  transition-duration: 50ms;
+}
+
+button:nth-child(2) {
+  background-color: rgb(3, 153, 138);
+}
+
+button:hover {
+  padding: 10px 25px;
+}
+
+button:last-child {
+  background-color: deeppink;
+}
+
+section {
+  background-color: lightgray;
+  padding: 100px;
+}
+section > div:first-child {
+  text-align: center;
+  line-height: 20px;
+}
+
+section > div:last-child {
+  margin-top: 50px;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section > div:last-child > div {
+  background-color: rgb(255, 255, 255);
+  height: 250px;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+p > span {
+  font-size: 0.8em;
+  color: grey;
+}
+
+.icon-div {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  border: 2px solid turquoise;
+}

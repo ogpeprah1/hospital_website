@@ -1,0 +1,1 @@
+const textfield = document.getElementById('typewriter-text')
