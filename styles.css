@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(238, 238, 238);
   padding: 0;
@@ -24,6 +28,11 @@ nav ul {
   width: 100%;
 }
 
+nav ul img {
+  margin-right: auto;
+  width: 70px;
+}
+
 nav ul li {
   list-style-type: none;
   color: black;
@@ -32,7 +41,7 @@ nav ul li {
 li > a {
   text-decoration: none;
   color: rgb(3, 153, 138);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   font-size: 0.9em;
   font-weight: 500;
 }
@@ -90,6 +99,14 @@ h1 > span {
   text-decoration: none;
 }
 
+button {
+  width: fit-content;
+  background-color: rgb(0, 197, 135);
+  border: none;
+  color: white;
+  font-size: 0.7em;
+  padding: 10px 20px;
+}
 button:hover {
   cursor: pointer;
 }
@@ -138,8 +155,12 @@ section > div:last-child > div {
 }
 
 section > div:last-child > div:hover .icon-div {
-  background-color: turquoise;
+  background-color: rgb(0, 197, 135);
   border: none;
+}
+
+section > div:last-child > div > p {
+  font-weight: 600;
 }
 
 section > div:last-child > div:hover {
@@ -152,13 +173,14 @@ section > div:last-child > div:hover {
 p > span {
   font-size: 0.8em;
   color: grey;
+  font-weight: 400;
 }
 
 .icon-div {
   width: 70px;
   height: 70px;
   border-radius: 20px;
-  border: 2px solid turquoise;
+  border: 2px solid rgb(0, 197, 135);
   transition-duration: 500ms;
 }
 
@@ -186,6 +208,11 @@ p > span {
   -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
 }
 
+.attributes-container>div >.icon-div{
+  border: none;
+  background-color: white;
+}
+
 .attributes-container > div:first-child {
   background-color: rgb(0, 141, 197);
 }
@@ -203,11 +230,26 @@ p > span {
 }
 
 .Appointment-Container {
+  display: flex;
   height: 70vh;
-  background-color: brown;
-  background-image: url(./appointment.jpg), url(./equipments.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 141, 197, 0.4),
+      rgb(0, 197, 135)
+    ),
+    url(./assets/appointment1.jpg);
+  background-size: 100%, cover;
   background-repeat: no-repeat;
-  background-position: left, right;
+  background-position: center, right;
+  overflow-y: hidden;
+  background-attachment: fixed;
+}
+
+.Appointment-Container > img {
+  margin-left: auto;
+  margin-top: 100px;
+  transform: scale(1.7);
+  margin-right: 200px;
 }
 
 form {
@@ -271,10 +313,10 @@ select :focus {
 }
 
 .choose-us-container {
-  padding: 100px;
+  padding: 100px 100px 0 100px;
   background-color: rgb(0, 141, 197);
   color: white;
-  text-align: center;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -284,6 +326,7 @@ select :focus {
 .choose-us-info-text {
   width: 80%;
   padding: 10px;
+  text-align: center;
 }
 
 .choose-us-grid {
@@ -297,28 +340,184 @@ select :focus {
 .choose-us-grid > div:first-child {
   grid-row: 1;
   grid-column: 1;
-  background-color: red;
 }
 
 .choose-us-grid > div:nth-child(2) {
   grid-row: 1 / span 2;
   grid-column: 2;
-  background-color: rgb(255, 200, 0);
+  background-image: url(./assets/black-nurse-man-getting-ready-work-removebg-preview.png);
 }
 
 .choose-us-grid > div:nth-child(3) {
   grid-row: 1;
   grid-column: 3;
-  background-color: turquoise;
 }
 .choose-us-grid > div:nth-child(4) {
   grid-row: 2;
   grid-column: 1;
-  background-color: deeppink;
 }
 
 .choose-us-grid > div:last-child {
   grid-row: 2;
   grid-column: 3;
-  background-color: greenyellow;
+}
+
+.choose-us-div > div {
+  display: flex;
+  gap: 0.4em;
+  align-items: flex-end;
+}
+
+.choose-us-div > div > .icon-div {
+  width: 50px;
+  height: 50px;
+  background-color: turquoise;
+  border: none;
+  border-radius: 50%;
+}
+
+.gallery {
+  padding: 100px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 174, 197, 0.8),
+      rgba(0, 197, 158, 0.8)
+    ),
+    url(./assets/two-african-american-pharmacist-working-drugstore-hospital-pharmacy-african-healthcare.jpg);
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+.gallery-container {
+  margin-top: 50px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  gap: 1.3em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-div {
+  flex-basis: 30%;
+  background-size: cover;
+  background-position: center;
+  transition-duration: 400ms;
+}
+
+.image-div:first-child {
+  background-image: url(./assets/gallery1.jpg);
+}
+
+.image-div:nth-child(2) {
+  background-image: url(./assets/gallery\ 2.jpg);
+}
+
+.image-div:nth-child(3) {
+  background-image: url(./assets/gallery\ 3.jpg);
+}
+.image-div:nth-child(4) {
+  background-image: url(./assets/gallery\ 4.jpg);
+}
+.image-div:nth-child(5) {
+  background-image: url(./assets/gallery\ 5.jpg);
+}
+.image-div:last-child {
+  background-image: url(./assets/gallery\ 6.jpg);
+}
+
+.team {
+  padding: 100px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-div {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition-duration: 400ms;
+}
+
+.team-img {
+  width: 270px;
+  height: 270px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 50%;
+}
+
+.team-div:hover,
+.image-div:hover {
+  transform: translateY(-10px);
+}
+
+.team-info {
+  text-align: center;
+}
+
+.team-info > small {
+  color: gray;
+}
+
+footer {
+  padding: 100px;
+  width: 100;
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer > div {
+  flex-basis: 25%;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+}
+
+footer img {
+  width: 100px;
+}
+
+footer > div > h3 {
+  color: white;
+}
+
+.footer-col .icon-div {
+  border: none;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+}
+
+.footer-col {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+textarea {
+  font-size: 0.7em;
+  padding: 10px;
+}
+
+.bottom-footer {
+  background-color: rgb(45, 45, 45);
+  color: grey;
+  text-align: center;
+  height: 10vh;
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
