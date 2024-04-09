@@ -1,0 +1,24 @@
+section > div:last-child > .our-service-div {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  flex-basis: 45%;
+  flex-direction: row;
+  gap: 1em;
+}
+
+section > div:last-child > .our-service-div > div:last-child {
+  text-align: left;
+  flex-basis: 90%;
+}
+
+section > div:last-child > .our-service-div > .icon-div {
+  margin-left: -60px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(3, 153, 138);
+  border: none;
+}
+
+
